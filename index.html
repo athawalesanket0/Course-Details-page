@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Detail Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <main class="container">
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-bar" placeholder="Search lectures...">
+            <i class="fas fa-user profile-icon"></i>
+        </div>
+
+        <!-- Course Title -->
+        <div class="title">
+            <h1>Web Security</h1>
+            <p class="intro">Web security is a broad category of security solutions designed to protect users,
+                devices, and networks from internet-based cyberattacks like malware, phishing, and data breaches.
+                It involves various technologies such as firewalls, intrusion prevention systems (IPS), sandboxing,
+                URL filtering, and more</p>
+        </div>
+
+        <!-- Course Details Cards -->
+        <div class="course-details-row">
+            <div class="course-detail-card">
+                <i class="fas fa-signal"></i>
+                <div class="card-content">
+                    <h4>Course Level</h4>
+                    <p>Beginners</p>
+                </div>
+            </div>
+            <div class="course-detail-card">
+                <i class="fas fa-clock"></i>
+                <div class="card-content">
+                    <h4>Duration</h4>
+                    <p>8 Hours</p>
+                </div>
+            </div>
+            <div class="course-detail-card">
+                <i class="fas fa-video"></i>
+                <div class="card-content">
+                    <h4>Total Videos</h4>
+                    <p>8</p>
+                </div>
+            </div>
+            <div class="course-detail-card">
+                <i class="fas fa-star"></i>
+                <div class="card-content">
+                    <h4>Ratings</h4>
+                    <p>4.7/5</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Course Layout -->
+        <div class="course-layout">
+            <!-- Course Content Column -->
+            <div class="course-content-column">
+                <h2>Web Security Course Contents</h2>
+                <div class="content-list">
+                    <div class="lecture-item active" data-lecture="0">Web Security - Lecture 01</div>
+                    <div class="lecture-item" data-lecture="1">Web Security - Lecture 02</div>
+                    <div class="lecture-item" data-lecture="2">Web Security - Lecture 03</div>
+                    <div class="lecture-item" data-lecture="3">Web Security - Lecture 04</div>
+                    <div class="lecture-item" data-lecture="4">Web Security - Lecture 05</div>
+                    <div class="lecture-item" data-lecture="5">Web Security - Lecture 06</div>
+                    <div class="lecture-item" data-lecture="6">Web Security - Lecture 07</div>
+                    <div class="lecture-item" data-lecture="7">Web Security - Lecture 08</div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-section">
+                <!-- Video Player -->
+                <div class="video-player">
+                    <video id="course-video" controls>
+                        <source src="placeholder-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video Controls -->
+                <div class="video-controls">
+                    <div class="video-interactions">
+                        <button class="interaction-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+                        <button class="interaction-btn"><i class="fas fa-thumbs-down"></i> Dislike</button>
+                        <button class="interaction-btn"><i class="fas fa-share-alt"></i> Share</button>
+                    </div>
+                    <div class="navigation-controls">
+                        <button class="nav-btn" id="prev-btn"><i class="fas fa-chevron-left"></i> Prev</button>
+                        <button class="nav-btn" id="next-btn">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-navigation">
+            <button class="section-tab active" data-section="overview">Course Overview</button>
+            <button class="section-tab" data-section="comments">Comments</button>
+            <button class="section-tab" data-section="feedback">Feedback</button>
+            <button class="section-tab" data-section="downloads">Downloads</button>
+        </div>
+
+        <div class="section-content">
+            <div class="section summary-section" id="overview-section" data-section="overview">
+                <h3>Course Overview</h3>
+                <p>Dive deep into web security fundamentals, understanding vulnerabilities, attack vectors, and
+                    defensive strategies. Learn how to protect web applications from common security threats and
+                    implement robust security measures.</p>
+                <ul>
+                    <li>Understanding web application vulnerabilities</li>
+                    <li>Implementing secure coding practices</li>
+                    <li>Defensive programming techniques</li>
+                    <li>Real-world security case studies</li>
+                </ul>
+            </div>
+
+            <div class="section comment-section hidden" id="comments-section" data-section="comments">
+                <h3>Student Comments</h3>
+                <div class="comment">
+                    <div class="user-icon">
+                        <i class="fas fa-user profile-icon"></i>
+                    </div>
+                    <div class="user-comment">
+                        <strong>John D.</strong>
+                        <p>Excellent course! Really helped me understand web security fundamentals.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="user-icon">
+                        <i class="fas fa-user profile-icon"></i>
+                    </div>
+                    <div class="user-comment">
+                        <strong>John D.</strong>
+                        <p>Excellent course! Really helped me understand web security fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section feedback-section hidden" id="feedback-section" data-section="feedback">
+                <h3>Course Feedback</h3>
+                <form id="feedback-form">
+                    <textarea placeholder="Share your thoughts about the course..."></textarea>
+                    <div class="form-actions">
+                        <input type="text" placeholder="Your Name (Optional)">
+                        <button type="submit">Submit Feedback</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="section resource-section hidden" id="downloads-section" data-section="downloads">
+                <h3>Course Resources</h3>
+                <div class="download-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Course Syllabus</span>
+                    <button>Download</button>
+                </div>
+                <div class="download-item">
+                    <i class="fas fa-file-code"></i>
+                    <span>Sample Code Snippets</span>
+                    <button>Download</button>
+                </div>
+                <div class="download-item">
+                    <i class="fas fa-file-archive"></i>
+                    <span>Lecture Slides</span>
+                    <button>Download</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
